@@ -1,8 +1,8 @@
 .container.products-container
   .row
     - @products.each do |product|
-      .col-md-4
-        .card.m-2.p-2
+      .col-md-4.m-2
+        .card
           .card-body
             h2.card-title 
               = product.name
