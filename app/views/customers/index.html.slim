@@ -1,0 +1,28 @@
+.container.products-container 
+  = link_to "New customer", new_customer_path, class: 'btn btn-outline-primary'
+  table.table.mt-2
+    thead
+      tr
+        th scope="col"  Id
+        th scope="col"  Name
+        th scope="col"  Phone Number
+        th scope="col"  Organization
+        th scope="col"  Address
+        th scope="col" 
+    tbody
+      -@customers.each do |customer|
+        tr
+          th scope="row"  
+            = customer.id
+          td 
+            = customer.name
+          td 
+            = customer.phone_no
+          td 
+            = customer.organization
+          td
+            = customer.address
+          td
+            = link_to "Edit", edit_customer_path(customer), class: 'btn btn-outline-warning'
+            |   &nbsp; 
+            = link_to "Delete", customer_path(customer), method: :delete, data: {confirm: "Are you sure you want to delete #{customer.name} ? "}, class: 'btn btn-outline-danger'

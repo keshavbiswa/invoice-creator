@@ -1,0 +1,7 @@
+.container.edit-customer-container.mt-5
+  h1.card-title 
+    |Edit 
+    = @customer.name
+  .card
+    .card-body
+      = render 'form', customer: @customer

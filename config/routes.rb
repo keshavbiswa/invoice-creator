@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'customer/index'
+  get 'customer/show'
+  get 'customer/new'
+  get 'customer/create'
+  get 'customer/edit'
+  get 'customer/update'
+  get 'customer/destroy'
+  resources :customers
   resources :products
   root 'home#index'
   get 'home/about'
