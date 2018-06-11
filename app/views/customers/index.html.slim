@@ -23,6 +23,6 @@
           td
             = customer.address
           td
-            = link_to "Edit", edit_customer_path(customer), class: 'btn btn-outline-secondary'
+            = link_to "Edit", edit_customer_path(customer), class: 'btn btn-outline-warning'
             |   &nbsp; 
             = link_to "Delete", customer_path(customer), method: :delete, data: {confirm: "Are you sure you want to delete #{customer.name} ? "}, class: 'btn btn-outline-danger'
